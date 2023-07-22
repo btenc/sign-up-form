@@ -11,7 +11,43 @@
     font-family: sans-serif;
 }
 
-h2{
-    font-family: norsebold;
+.layout {
+    display: flex;
 }
+  
+.body { 
+    flex-grow: 1; 
+}
+  
+.sidebar{
+    background-image: url(content/background.jpg);
+    background-size: cover;
+    width: 40vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.odin-banner{
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin-bottom: 20vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.odin-text{
+    font-family: norsebold;
+    color: white;
+    font-size: 8vw;
+}
+
+.odin-logo{
+    height: 10vw;
+}
+
 
