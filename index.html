@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Form</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <section class="layout">
-        <div class="sidebar">
-            <div class="odin-banner">
-                <img class="odin-logo" src="content/odin-lined.png" alt="Odin logo">
-                <div class="odin-text">ODIN</div>
-            </div>
+      <div class="sidebar">
+        <div class="odin-banner">
+          <img class="odin-logo" src="content/odin-lined.png" alt="Odin logo" />
+          <div class="odin-text">ODIN</div>
         </div>
-        <div class="body">
-            <div class="section section-top">
-                <p class="standard-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-                <p class="standard-text">You <em>know</em> you want to.</p>
-            </div>
-            <div class="section section-mid">
-                <p class="standard-text">Let's do this!</p>
-                <div class="inputs">
-                    <div class="input-col col-1">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
-
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email">
-
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
-                    </div>
-                    <div class="input-col col-2">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
-
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" name="phone-number">
-
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirm-password">
-                    </div>
-                </div>
-            </div>
-            <div class="section section-bottom">
-                <button>Create Account</button>
-                <p>Already have an account? Log in</p>
-            </div>
+      </div>
+      <div class="body">
+        <div class="section section-top">
+          <p class="standard-text">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+          <p class="standard-text">You <em>know</em> you want to.</p>
         </div>
+        <div class="section section-mid">
+          <p class="standard-text">Let's do this!</p>
+          <form action="" method="get" class="sign-up-form" id="sign-up-acc">
+            <div class="input-col">
+              <div class="col-item">
+                <label for="first-name">FIRST NAME</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Thor"
+                  required
+                />
+              </div>
+              <div class="col-item">
+                <label for="email">EMAIL</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="odin@example.com"
+                  required
+                />
+              </div>
+              <div class="col-item">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+            </div>
+            <div class="input-col">
+              <div class="col-item">
+                <label for="last-name">LAST NAME</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Odin"
+                  required
+                />
+              </div>
+              <div class="col-item">
+                <label for="phone-number">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="000-000-0000"
+                  required
+                />
+              </div>
+              <div class="col-item">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="section section-bottom">
+          <button type="submit" form="sign-up-acc">Create Account</button>
+          <p>Already have an account?<a href="index.html" id="login-text"> Log in</a></p>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
